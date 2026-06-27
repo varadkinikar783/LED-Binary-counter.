@@ -7,15 +7,14 @@ Resets back to 0 after 15.
 ## DEMO:
 [Watch demo video](https://youtube.com/shorts/nNuSO2F7A6o?si=JftdsekEQ2i5O_1w)
 
-
 ## Hardware
-- Arduino Uno.
-- 4 LEDs (White).
-- 4 x 390Ω resistors.
-- Jumper wires:
-               -Red wires are for power from the arduino.
-               -white wires are used to complete the circuit by joining the LEDs to GND.
-               -Brown wire is used as the main GND wire.
+
+|  Part  |    Quantity    |
+|--      |--              |
+|  Arduino Uno R3  |      1      |
+|  LEDs(any color)  |    4       |
+|Resistors(220Ω/330Ω/390Ω)|    4  |
+|Jumper Wires| As many as needed.|
 
 ## Circuit
 - LED 0 → Pin 2.
@@ -27,3 +26,6 @@ Resets back to 0 after 15.
 - Bit manipulation — extracting individual bits using >> and & 1.
 - For loops on hardware.
 - Binary number system practically.
+
+## Problems I Faced:
+- During my first few tests, whenever i would press any button the count would increment/decrement by 2,3 or even 5 units, basically it would jump from 2 to 5 or 6 to 1 even though i had pressed the respective buttons only once. After googlging this problem I learnt that thais was happening because of debouncing of the pins. To fix this I added a debouncedelay variable that would wait for the debounce to subside before taking the input.
